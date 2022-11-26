@@ -11,7 +11,6 @@ def draw_bbox(seg_path):
     # img = Image.open(seg_path)
     img = cv2.imread(seg_path,0)
     print(img.shape)
-
     result = img.copy()
     contours = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     contours = contours[0] if len(contours) == 2 else contours[1]

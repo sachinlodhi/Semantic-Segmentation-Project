@@ -50,7 +50,7 @@ def download_file(name):
     print(segmented_path)
     data =[fullpath, segmented_path]
     print(data)
-    return render_template("index_new.html", data=data)
+    return render_template("index.html", data=data)
     # return send_from_directory(app.config["UPLOAD_FOLDER"], name)
     # return redirect(url_for('displayResults', filename=data))
 

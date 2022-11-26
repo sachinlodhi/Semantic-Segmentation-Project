@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segmentation Results</title>
+    <!--Stylesheet-->
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+<h2>Segmentation Results : Before and After</h2>
+    <div class="container">
+        <img src="{{url_for('static', filename='/segmented/pred.jpg')}}">
+        <img id="my-img" src="{{url_for('static', filename='/resized/resized_img.jpg')}}">
+        <input type="range" min="0" max="100" value="50" id="slider" oninput="slide()">
+    </div>
+    <!--Script-->
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
