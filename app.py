@@ -31,15 +31,17 @@ def upload_file():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return redirect(url_for('download_file', name=filename))
-    return '''
-    <!doctype html>
-    <title>Upload new File</title>
-    <h1>Upload new File</h1>
-    <form method=post enctype=multipart/form-data>
-      <input type=file name=file>
-      <input type=submit value=Upload and predict>
-    </form>
-    '''
+
+    return render_template('file_upload.html')
+    # return '''
+    # <!doctype html>
+    # <title>Upload new File</title>
+    # <h1>Upload new File</h1>
+    # <form method=post enctype=multipart/form-data>
+    #   <input type=file name=file>
+    #   <input type=submit value=Upload and predict>
+    # </form>
+    # '''
 @app.route('/uploads/<name>')
 def download_file(name):
     print('in download function')
@@ -50,14 +52,14 @@ def download_file(name):
     print(segmented_path)
     data =[fullpath, segmented_path]
     print(data)
-    return render_template("index.html", data=data)
+    return render_template("results.html", data=data)
     # return send_from_directory(app.config["UPLOAD_FOLDER"], name)
     # return redirect(url_for('displayResults', filename=data))
 
 # @app.route('/dispalyResults/<filename>')
 # def displayResults(data):
 #     print(f'data in displayRes {data}')
-#     return render_template('index_old.html', data=data)
+#     return render_template('file_upload.html', data=data)
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
 
