@@ -1,9 +1,7 @@
 
 from PIL import Image, ImageOps
 import numpy as np
-import random
 import cv2
-import matplotlib.pyplot as plt
 from keras.models import load_model
 # Loading the model
 model = load_model("model/HME_SEm_Seg_704_704.hdf5",  compile=False)
