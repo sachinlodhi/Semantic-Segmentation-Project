@@ -20,14 +20,8 @@ python app.py
 - Click on submit, and the results will be presented on the new webpage as shown in demo.
 - Move the slider to compare the original image and the segmented results.
 
-
-
-
 ## Demo
-
-recent:///c228b418b492a8a05c912c6663846031
-
-
+[Screencast from 2022-11-28 12-45-26.webm](https://user-images.githubusercontent.com/28351261/204217468-0637d9de-ae9e-4f46-af71-e0b126a549c1.webm)
 
 
 ## Contributing
