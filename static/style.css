@@ -9,6 +9,7 @@ body{
     height: 100vh;
     display: grid;
     place-items: center;
+    background: khaki;
 }
 .container{
     height: 67.5vmin;
