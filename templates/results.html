@@ -14,6 +14,10 @@
         <img id="my-img" src="{{url_for( "static",filename='/uploaded_images/' + data[0])}}">
         <input type="range" min="0" max="100" value="50" id="slider" oninput="slide()">
     </div>
+<a href="{{url_for('static', filename='/segmented/pred.jpg')}}" download>
+    Download Result
+{#<img src="{{url_for('static', filename='/segmented/pred.jpg')}}" alt="W3Schools" width="104" height="142">#}
+</a>
     <!--Script-->
     <script src="{{url_for('static', filename='script.js')}}"></script>
 </body>
